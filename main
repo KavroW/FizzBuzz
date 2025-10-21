@@ -1,0 +1,39 @@
+/******************************************************************************
+
+FizzBuzz
+
+for multiples of 3, print fizz instad of the number
+for 5, print 5
+for both, print FizzBuss
+if none, print the number
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    bool fizzBuzzed = false;
+    
+    for(int i = 1; i <= 100; i++){
+        
+        if(i % 3 == 0){
+            cout << "Fizz";
+            fizzBuzzed = true;
+        }
+        if(i % 5 == 0){
+            cout << "Buzz";
+            fizzBuzzed = true;
+        }
+        
+        if(!fizzBuzzed){
+            cout << i;
+        }
+        
+        cout << endl;
+        fizzBuzzed = false;
+    }
+
+    return 0;
+}
